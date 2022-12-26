@@ -1,10 +1,10 @@
 /* ==UserStyle==
 @name         VK You
 @version      2.0
+@namespace    userstyles.world/user/dp0sk
 @description  VK Desgin Fixes from Me to You
 @author       dp0sk
-@namespace    userstyles.world/user/dp0sk
-@license      MIT
+@license      No License
 @preprocessor stylus
 
 @var select roundNFT "NFT Avatars Shape" ["hex:Hexagon", "round:Round"]
@@ -192,6 +192,8 @@
             height: 44px !important;
         }
     }
+}
+@-moz-document domain("vk.com"), domain("vk.ru") {
     /*Main*/
     .im-page--chat-body .im-page-chat-contain > .im-mess-stack > .im-mess-stack--content > .im-mess-stack--mess > .im-mess.im-mess_unread > .im-mess--text::before {
         border: 3px solid var(--background_content);
@@ -265,7 +267,9 @@
     section.ProfileGroup.ProfileVideos.vkuiGroup.vkuiGroup--sizeX-regular.vkuiGroup--card.vkuiGroup--padding-m div.vkuiGroup__inner,
     section.ProfileGroup.ProfileGifts.vkuiGroup.vkuiGroup--sizeX-regular.vkuiGroup--card.vkuiGroup--padding-m div.vkuiGroup__inner {
         padding: 8px 0 8px 0
-    }
+    } // div.DropdownActionSheet.vkuiDropdown.vkuiPopper.vkuiPopper--android {
+    //     margin-top: 60px;
+    // }
     .vkui--vkBase--dark,
     .vkui--vkBase--light,
     .vkui--vkCom--dark,
@@ -492,6 +496,8 @@
         height: 4px;
         opacity: 0.5;
     }
+}
+@-moz-document domain("vk.com"), domain("vk.ru") {
     /*Rounding */
     li.BannerItem.BannerItem--cover_header.BannerItem--viewType-large_list {
         border-radius: 10px;
@@ -795,6 +801,8 @@
         border-radius: 0 0 10px 10px
     }
     /* ==Games== */
+}
+@-moz-document domain("vk.com"), domain("vk.ru") {
     /* Floating Elements */
     [dir] .tt_default.tt_down::before,
     [dir] .tt_default.tt_down::after {
