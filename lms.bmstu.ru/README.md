@@ -1,13 +1,16 @@
+# Обратная связь:
+[Telegram](dp0sk.t.me)
+
 # Без правок:
 
-![Screenshot from 2024-10-10 22-56-23](https://github.com/user-attachments/assets/85cee0ba-9a58-4200-9c22-5e99118e4979)
-![Screenshot from 2024-10-10 22-53-55](https://github.com/user-attachments/assets/4dc96c20-01ba-4f9d-a9b1-3ab02926704e)
+![header](https://github.com/user-attachments/assets/85cee0ba-9a58-4200-9c22-5e99118e4979)
+![answer](https://github.com/user-attachments/assets/4dc96c20-01ba-4f9d-a9b1-3ab02926704e)
 
 
 # С правками:
 
-![Screenshot from 2024-10-10 22-56-03](https://github.com/user-attachments/assets/9c3aff49-c288-438d-b473-f6f857c36fb3)
-![Screenshot from 2024-10-10 22-55-32](https://github.com/user-attachments/assets/670e4f86-1b6a-4fdb-bcc1-af9c5329c2e7)
+![header-fix](https://github.com/user-attachments/assets/9c3aff49-c288-438d-b473-f6f857c36fb3)
+![answer-fix](https://github.com/user-attachments/assets/670e4f86-1b6a-4fdb-bcc1-af9c5329c2e7)
 
 # Правки CSS:
 ```css
