@@ -14,7 +14,7 @@
 
 # Правки CSS:
 ```css
-theme-dark .popover-region-toggle.rui-topbar-special-btn path {
+.theme-dark .popover-region-toggle.rui-topbar-special-btn path {
 fill-rule: evenodd;
 fill: white;
 }
