@@ -1,5 +1,5 @@
 # Обратная связь:
-[Telegram](dp0sk.t.me)
+[Telegram](https://dp0sk.t.me)
 
 # Без правок:
 
