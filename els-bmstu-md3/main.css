@@ -6,7 +6,7 @@
 
 @var select theme "Тема" ["system:Системная","light:Светлая","dark:Тёмная"]
 
-@var select accent "Цветовая схема" ["blue:Синий","violet:Фиолетовый", "pink:Розовый","red:Красный","green:Зелёный"]
+@var select accent "Цветовая схема" ["violet:Фиолетовый", "blue:Синий", "pink:Розовый","red:Красный","green:Зелёный"]
 
 @var checkbox els "Краткий текст в шапке" 0
 
@@ -815,6 +815,10 @@
         border-radius: 4px;
         margin-top: 2px;
         background: var(--ddwn-item);
+        color: var(--on-background);
+    }
+    
+    .popover-region-notifications .all-notifications:empty + .empty-message {
         color: var(--on-background);
     }
 
@@ -1902,7 +1906,7 @@
                 --tretiary-container: var(--md-ref-palette-tertiary90);
                 --on-tretiary-container: var(--md-ref-palette-tertiary10);
                 --background: var(--md-ref-palette-neutral99);
-                --background-semitransparent: #FFFBFE99;
+                --background-semitransparent: srgb(var(--background), .2);
                 --on-background: var(--md-ref-palette-neutral10);
                 --surface: var(--md-ref-palette-neutral99);
                 --surface-2: var(--md-ref-palette-neutral95);
@@ -1959,7 +1963,7 @@
                 --tretiary-container: var(--md-ref-palette-tertiary30);
                 --on-tretiary-container: var(--md-ref-palette-tertiary90);
                 --background: var(--md-ref-palette-neutral10);
-                --background-semitransparent: #1C1B1F99;
+                --background-semitransparent: srgb(var(--background), .8);
                 --on-background: var(--md-ref-palette-neutral90);
                 --surface: var(--md-ref-palette-neutral10);
                 --surface-2: var(--md-ref-palette-neutral20);
@@ -2028,7 +2032,7 @@
             --tretiary-container: var(--md-ref-palette-tertiary90);
             --on-tretiary-container: var(--md-ref-palette-tertiary10);
             --background: var(--md-ref-palette-neutral99);
-            --background-semitransparent: blend(var(--background), transparent);
+            --background-semitransparent: srgb(var(--background), .2);
             --on-background: var(--md-ref-palette-neutral10);
             --surface: var(--md-ref-palette-neutral99);
             --surface-2: var(--md-ref-palette-neutral95);
@@ -2091,7 +2095,7 @@
             --tretiary-container: var(--md-ref-palette-tertiary30);
             --on-tretiary-container: var(--md-ref-palette-tertiary90);
             --background: var(--md-ref-palette-neutral10);
-            --background-semitransparent: blend(var(--background), transparent);
+            --background-semitransparent: srgb(var(--background), .8);
             --on-background: var(--md-ref-palette-neutral90);
             --surface: var(--md-ref-palette-neutral10);
             --surface-2: var(--md-ref-palette-neutral20);
