@@ -1,1 +1,747 @@
+/* ==UserStyle==
+@name         WIP - Adwaita GNOME Shell Extensions
+@version      20240123.04.45
+@namespace    ?
+==/UserStyle== */
+@-moz-document domain("extensions.gnome.org") {
+    /* ROOT */
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --accent: #3584e4;
+            --on-accent: #FDFDFD;
+            --accent-reverse: #545454;
+            --on-accent-reverse: #C3C3C3;
+            --bg: #242424;
+            --border: #232323;
+            --text: #ffffff;
+            --text-light: #9a9a9a;
+            --text-banner: #e5e8eb;
+            --text-error: #ebe5e5;
+            --tab: #454545;
+            --tab-hover: #4b4b4b;
+            --tab-active: #515151;
+            --card: #363636;
+            --card-hover: #3c3c3c;
+            --card-gray: #2c2c2c;
+            --card-radius: 12px;
+            --input-bar: #3a3a3a;
+            --banner: #29415e;
+            --banner-radius: 6px;
+            --text-light-filter: invert(41%) sepia(6%) saturate(17%) hue-rotate(336deg) brightness(92%) contrast(90%);
+            --shadow: 0px 2px 6px 0px var(--border);
+            --button: var(--accent);
+            --button-radius: 6px;
+            --button-hover: #4990e7;
+            --button-gray: #464646;
+            --trans-btn-hover: var(--tab);
+            --text-button: #d9e8fa;
+            --text-button-gray: #8a8a8a;
+            --link: var(--button);
+            --link-hover: var(--button-hover);
+            --link-visited: var(--link);
+            --dd: var(--card);
+            --dd-radius: 12px;
+            --dde-radius: 6px;
+            --dd-shadow: 0px 0px 10px 0px rgba(0, 9, 15, .4);
+            --error: #5e2929;
+            --notif-icon: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg height='48px' viewBox='0 0 16 16' width='48px' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C9C9C'%3E%3Cpath d='m 7.996094 0 c -2.835938 0 -5.292969 2 -5.871094 4.777344 c -0.527344 2.535156 0.6875 5.035156 2.875 6.328125 v 0.894531 c 0 0.554688 0.449219 1 1 1 h 4 c 0.550781 0 1 -0.445312 1 -1 l 0.003906 -0.898438 c 2.179688 -1.292968 3.398438 -3.796874 2.867188 -6.332031 c -0.582032 -2.773437 -3.039063 -4.769531 -5.875 -4.769531 z m 0 2 c 1.898437 0 3.527344 1.320312 3.917968 3.179688 c 0.390626 1.863281 -0.570312 3.726562 -2.3125 4.488281 c -0.363281 0.15625 -0.597656 0.515625 -0.601562 0.914062 v 0.417969 h -2 v -0.417969 c -0.003906 -0.398437 -0.238281 -0.753906 -0.601562 -0.914062 c -1.742188 -0.761719 -2.703126 -2.625 -2.316407 -4.484375 s 2.015625 -3.183594 3.914063 -3.183594 z m -1.996094 12 v 1 c 0 0.554688 0.445312 1 1 1 h 2 c 0.554688 0 1 -0.445312 1 -1 v -1 z m 0 0'/%3E%3Cpath d='m 6.644531 6.144531 c -0.195312 0.195313 -0.195312 0.515625 0 0.707031 l 1 1 c 0.195313 0.195313 0.511719 0.195313 0.707031 0 l 1 -1 c 0.195313 -0.191406 0.195313 -0.511718 0 -0.707031 c -0.195312 -0.191406 -0.511718 -0.191406 -0.707031 0 l -0.648437 0.648438 l -0.644532 -0.648438 c -0.195312 -0.191406 -0.511718 -0.191406 -0.707031 0 z m 0 0' fill-opacity='0.34902'/%3E%3C/g%3E%3C/svg%3E");
+            --err-icon: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg height='48px' viewBox='0 0 16 16' width='48px' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m 5.105469 0 c -0.265625 0 -0.519531 0.105469 -0.707031 0.292969 l -4.101563 4.101562 c -0.1875 0.1875 -0.29296875 0.441407 -0.2890625 0.707031 v 5.796876 c -0.00390625 0.265624 0.1015625 0.519531 0.2929685 0.707031 l 4.097657 4.101562 c 0.1875 0.1875 0.441406 0.292969 0.707031 0.292969 h 5.800781 c 0.265625 0 0.519531 -0.105469 0.707031 -0.292969 l 4.101563 -4.101562 c 0.1875 -0.1875 0.292968 -0.441407 0.292968 -0.707031 v -5.796876 c 0 -0.265624 -0.105468 -0.519531 -0.296874 -0.707031 l -4.097657 -4.101562 c -0.1875 -0.1875 -0.441406 -0.292969 -0.707031 -0.292969 z m 0.414062 2 h 4.96875 l 3.519531 3.511719 v 4.972656 l -3.515624 3.515625 h -4.972657 l -3.511719 -3.511719 v -4.972656 z m 1.480469 2 v 3 l 0.28125 2 h 1.46875 l 0.25 -2 v -3 z m 1 5.75 c -0.691406 0 -1.25 0.558594 -1.25 1.25 s 0.558594 1.25 1.25 1.25 s 1.25 -0.558594 1.25 -1.25 s -0.558594 -1.25 -1.25 -1.25 z m 0 0' fill='%239C9C9C'/%3E%3C/svg%3E");
+            --ext-err-icon: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg height='28px' viewBox='0 0 16 16' width='28px' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m 8 1 c -3.871094 0 -7 3.128906 -7 7 s 3.128906 7 7 7 s 7 -3.128906 7 -7 s -3.128906 -7 -7 -7 z m -4 6 h 8 v 2 h -8 z m 0 0' fill='%23FF7B63'/%3E%3C/svg%3E");
+            --ext-upd-icon: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg height='18px' viewBox='0 0 16 16' width='18px' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m 8 0 c -0.257812 0 -0.511719 0.0976562 -0.707031 0.292969 l -1.707031 1.707031 h -2.585938 c -0.550781 0 -1 0.449219 -1 1 v 2.585938 l -1.707031 1.707031 c -0.3906252 0.390625 -0.3906252 1.023437 0 1.414062 l 1.707031 1.707031 v 2.585938 c 0 0.550781 0.449219 1 1 1 h 2.585938 l 1.707031 1.707031 c 0.390625 0.390625 1.023437 0.390625 1.414062 0 l 1.707031 -1.707031 h 2.585938 c 0.550781 0 1 -0.449219 1 -1 v -2.585938 l 1.707031 -1.707031 c 0.390625 -0.390625 0.390625 -1.023437 0 -1.414062 l -1.707031 -1.707031 v -2.585938 c 0 -0.550781 -0.449219 -1 -1 -1 h -2.585938 l -1.707031 -1.707031 c -0.195312 -0.1953128 -0.449219 -0.292969 -0.707031 -0.292969 z m 0 5 c 0.257812 0 0.511719 0.097656 0.707031 0.292969 l 2 2 c 0.183594 0.1875 0.289063 0.441406 0.285157 0.707031 h 0.007812 v 1 h -2 v 2 h -2 v -2 h -2 v -1 h 0.007812 c -0.003906 -0.265625 0.101563 -0.519531 0.285157 -0.707031 l 2 -2 c 0.195312 -0.195313 0.449219 -0.292969 0.707031 -0.292969 z m 0 0' fill='%23ff7800'/%3E%3C/svg%3E");
+            --ext-conf-icon: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg height='18px' viewBox='0 0 16 16' width='18px' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m 8 0 c -0.550781 0 -1 0.449219 -1 1 v 0.238281 c 0 0.464844 -0.378906 0.902344 -0.820312 1.046875 c -0.023438 0.007813 -0.042969 0.011719 -0.0625 0.019532 c -0.445313 0.148437 -1.007813 0.015624 -1.28125 -0.359376 l -0.140626 -0.195312 c -0.15625 -0.214844 -0.390624 -0.359375 -0.652343 -0.398438 c -0.261719 -0.042968 -0.53125 0.019532 -0.742188 0.175782 c -0.449219 0.324218 -0.550781 0.949218 -0.222656 1.398437 l 0.140625 0.199219 c 0.277344 0.375 0.226562 0.953125 -0.050781 1.328125 c -0.011719 0.015625 -0.023438 0.035156 -0.035157 0.050781 c -0.273437 0.378906 -0.804687 0.601563 -1.25 0.457032 l -0.230468 -0.074219 c -0.523438 -0.171875 -1.089844 0.117187 -1.257813 0.640625 c -0.171875 0.527344 0.113281 1.089844 0.640625 1.261718 l 0.222656 0.074219 c 0.445313 0.144531 0.738282 0.636719 0.75 1.101563 v 0.070312 c 0.015626 0.464844 -0.304687 0.960938 -0.746093 1.105469 l -0.226563 0.070313 c -0.527344 0.171874 -0.8125 0.738281 -0.640625 1.261718 c 0.167969 0.523438 0.734375 0.8125 1.257813 0.640625 l 0.230468 -0.074219 c 0.445313 -0.144531 0.976563 0.078126 1.25 0.457032 c 0.011719 0.015625 0.027344 0.035156 0.039063 0.050781 c 0.277344 0.375 0.324219 0.953125 0.050781 1.328125 l -0.144531 0.203125 c -0.324219 0.445313 -0.226563 1.070313 0.222656 1.394531 c 0.445313 0.324219 1.070313 0.226563 1.394531 -0.21875 l 0.144532 -0.199218 c 0.273437 -0.378907 0.835937 -0.507813 1.277344 -0.359376 c 0.019531 0.007813 0.042968 0.011719 0.0625 0.019532 c 0.445312 0.140625 0.820312 0.578125 0.820312 1.046875 v 0.238281 c 0 0.550781 0.449219 1 1 1 s 1 -0.449219 1 -1 v -0.238281 c 0 -0.46875 0.378906 -0.90625 0.820312 -1.046875 c 0.023438 -0.007813 0.042969 -0.015625 0.066407 -0.023438 c 0.441406 -0.144531 1.003906 -0.015625 1.277343 0.363282 l 0.144532 0.199218 c 0.324218 0.445313 0.949218 0.542969 1.394531 0.21875 c 0.445313 -0.324218 0.546875 -0.949218 0.222656 -1.394531 l -0.148437 -0.203125 c -0.273438 -0.375 -0.226563 -0.953125 0.050781 -1.328125 c 0.015625 -0.015625 0.027344 -0.035156 0.039063 -0.050781 c 0.273437 -0.378906 0.804687 -0.601563 1.25 -0.457032 l 0.234374 0.078126 c 0.523438 0.167968 1.085938 -0.121094 1.257813 -0.644532 c 0.171875 -0.523437 -0.117187 -1.089844 -0.640625 -1.257812 l -0.230469 -0.074219 c -0.445312 -0.144531 -0.734375 -0.640625 -0.746093 -1.105469 c 0 -0.023437 0 -0.046875 0 -0.070312 c -0.015626 -0.464844 0.300781 -0.957032 0.746093 -1.101563 l 0.230469 -0.074219 c 0.523438 -0.171874 0.8125 -0.734374 0.640625 -1.261718 c -0.171875 -0.523438 -0.734375 -0.8125 -1.257813 -0.640625 l -0.230468 0.074219 c -0.445313 0.144531 -0.980469 -0.078126 -1.253906 -0.457032 c -0.011719 -0.015625 -0.023438 -0.035156 -0.035157 -0.050781 c -0.277343 -0.375 -0.324219 -0.953125 -0.050781 -1.328125 l 0.144531 -0.199219 c 0.324219 -0.445312 0.226563 -1.074219 -0.222656 -1.398437 c -0.214844 -0.15625 -0.480469 -0.21875 -0.742187 -0.179688 c -0.265626 0.042969 -0.5 0.1875 -0.652344 0.402344 l -0.144532 0.195312 c -0.273437 0.378907 -0.835937 0.507813 -1.28125 0.363282 c -0.019531 -0.007813 -0.039062 -0.015625 -0.0625 -0.023438 c -0.441406 -0.140625 -0.820312 -0.578125 -0.820312 -1.046875 v -0.238281 c 0 -0.550781 -0.449219 -1 -1 -1 z m 0 4 c 0.871094 0 1.675781 0.273438 2.332031 0.742188 c 0.003907 0.007812 0.011719 0.015624 0.019531 0.023437 c 0.011719 0.003906 0.019532 0.007813 0.03125 0.015625 c 0.660157 0.484375 1.160157 1.171875 1.421876 1.976562 v 0.007813 s 0.003906 0.003906 0.003906 0.007813 c 0.292968 0.851562 0.15625 1.65625 0 2.457031 c 0 0 -0.003906 0.003906 -0.003906 0.007812 v 0.003907 c -0.261719 0.800781 -0.757813 1.488281 -1.414063 1.976562 c -0.015625 0.003906 -0.027344 0.011719 -0.039063 0.019531 c -0.007812 0.003907 -0.015624 0.011719 -0.019531 0.019531 c -0.65625 0.46875 -1.460937 0.742188 -2.332031 0.742188 c -0.855469 0 -1.644531 -0.265625 -2.289062 -0.714844 c -0.019532 -0.015625 -0.042969 -0.035156 -0.0625 -0.046875 c -0.011719 -0.007812 -0.023438 -0.015625 -0.035157 -0.019531 c -0.652343 -0.484375 -1.148437 -1.160156 -1.40625 -1.945312 c -0.003906 -0.015626 -0.007812 -0.023438 -0.011719 -0.035157 c -0.003906 -0.007812 -0.007812 -0.015625 -0.011718 -0.019531 c -0.285156 -0.847656 -0.148438 -1.644531 0 -2.4375 c 0.003906 -0.007812 0.007812 -0.011719 0.011718 -0.019531 c 0.003907 -0.011719 0.007813 -0.023438 0.011719 -0.039063 c 0.261719 -0.785156 0.757813 -1.460937 1.414063 -1.945312 c 0.007812 -0.003906 0.019531 -0.007813 0.027344 -0.015625 c 0.019531 -0.011719 0.042968 -0.03125 0.058593 -0.046875 c 0.648438 -0.449219 1.4375 -0.714844 2.292969 -0.714844 z m 0 0' fill='%239C9C9C'/%3E%3C/svg%3E");
+            --ext-del-icon: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg height='18px' viewBox='0 0 16 16' width='18px' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FF7B63'%3E%3Cpath d='m 1 3 h 14 c 0.550781 0 1 0.449219 1 1 s -0.449219 1 -1 1 h -14 c -0.550781 0 -1 -0.449219 -1 -1 s 0.449219 -1 1 -1 z m 0 0'/%3E%3Cpath d='m 4 4 v -1.5 c 0 -1.386719 1.113281 -2.5 2.5 -2.5 h 2.980469 c 1.382812 0 2.5 1.113281 2.5 2.5 v 1.5 h -2 v -1.5 c 0 -0.269531 -0.230469 -0.5 -0.5 -0.5 h -2.980469 c -0.269531 0 -0.5 0.230469 -0.5 0.5 v 1.5 z m 0 0'/%3E%3Cpath d='m 4 4 v 9 c 0 0.546875 0.453125 1 1 1 h 6 c 0.546875 0 1 -0.453125 1 -1 v -9 h 2 v 9 c 0 1.660156 -1.339844 3 -3 3 h -6 c -1.660156 0 -3 -1.339844 -3 -3 v -9 z m 0 0'/%3E%3Cpath d='m 7 7 v 5 c 0 0.277344 -0.222656 0.5 -0.5 0.5 s -0.5 -0.222656 -0.5 -0.5 v -5 c 0 -0.277344 0.222656 -0.5 0.5 -0.5 s 0.5 0.222656 0.5 0.5 z m 0 0'/%3E%3Cpath d='m 10 7 v 5 c 0 0.277344 -0.222656 0.5 -0.5 0.5 s -0.5 -0.222656 -0.5 -0.5 v -5 c 0 -0.277344 0.222656 -0.5 0.5 -0.5 s 0.5 0.222656 0.5 0.5 z m 0 0'/%3E%3C/g%3E%3C/svg%3E");
+            --loading-icon: url("https://raw.githubusercontent.com/dp0sk/UserCSS/refs/heads/main/adwaita-gnome-extensions/spinner-dark.gif");
+        }
 
+
+        .gnome-navbar-brand img {
+            filter: invert(20%);
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --accent: #3584e4;
+            --on-accent: #fff;
+            --accent-reverse: #E0E0E0;
+            --on-accent-reverse: #fff;
+            --bg: #fafafa;
+            --border: #e2e2e2;
+            --text: #2e2e2e;
+            --text-light: #656565;
+            --text-banner: #32383f;
+            --text-error: #3f3232;
+            --tab: #e6e6e6;
+            --tab-hover: #e0e0e0;
+            --tab-active: #c2c2c2;
+            --card: #fff;
+            --card-hover: var(--card-gray);
+            --card-gray: #f6f6f6;
+            --card-radius: 12px;
+            --input-bar: #e6e6e6;
+            --banner: #bfd7f3;
+            --banner-radius: 6px;
+            --text-light-filter: invert(42%) sepia(0%) saturate(4%) hue-rotate(152deg) brightness(93%) contrast(90%);
+            --shadow: 0px 2px 6px 0px var(--border);
+            --button: var(--accent);
+            --button-radius: 6px;
+            --button-hover: #4990e7;
+            --button-gray: #f5f5f5;
+            --trans-btn-hover: var(--tab);
+            --text-button: #fff;
+            --text-button-gray: #a4a4a4;
+            --link: var(--button);
+            --link-hover: var(--button-hover);
+            --link-visited: var(--link);
+            --dd: var(--card);
+            --dd-radius: 12px;
+            --dde-radius: 6px;
+            --dd-shadow: 0px 0px 7px 0px rgba(34, 60, 80, 0.2);
+            --error: #f3bfbf;
+            --notif-icon: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg height='48px' viewBox='0 0 16 16' width='48px' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%232e3436'%3E%3Cpath d='m 7.996094 0 c -2.835938 0 -5.292969 2 -5.871094 4.777344 c -0.527344 2.535156 0.6875 5.035156 2.875 6.328125 v 0.894531 c 0 0.554688 0.449219 1 1 1 h 4 c 0.550781 0 1 -0.445312 1 -1 l 0.003906 -0.898438 c 2.179688 -1.292968 3.398438 -3.796874 2.867188 -6.332031 c -0.582032 -2.773437 -3.039063 -4.769531 -5.875 -4.769531 z m 0 2 c 1.898437 0 3.527344 1.320312 3.917968 3.179688 c 0.390626 1.863281 -0.570312 3.726562 -2.3125 4.488281 c -0.363281 0.15625 -0.597656 0.515625 -0.601562 0.914062 v 0.417969 h -2 v -0.417969 c -0.003906 -0.398437 -0.238281 -0.753906 -0.601562 -0.914062 c -1.742188 -0.761719 -2.703126 -2.625 -2.316407 -4.484375 s 2.015625 -3.183594 3.914063 -3.183594 z m -1.996094 12 v 1 c 0 0.554688 0.445312 1 1 1 h 2 c 0.554688 0 1 -0.445312 1 -1 v -1 z m 0 0'/%3E%3Cpath d='m 6.644531 6.144531 c -0.195312 0.195313 -0.195312 0.515625 0 0.707031 l 1 1 c 0.195313 0.195313 0.511719 0.195313 0.707031 0 l 1 -1 c 0.195313 -0.191406 0.195313 -0.511718 0 -0.707031 c -0.195312 -0.191406 -0.511718 -0.191406 -0.707031 0 l -0.648437 0.648438 l -0.644532 -0.648438 c -0.195312 -0.191406 -0.511718 -0.191406 -0.707031 0 z m 0 0' fill-opacity='0.34902'/%3E%3C/g%3E%3C/svg%3E");
+            --err-icon: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg height='48px' viewBox='0 0 16 16' width='48px' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m 5.105469 0 c -0.265625 0 -0.519531 0.105469 -0.707031 0.292969 l -4.101563 4.101562 c -0.1875 0.1875 -0.29296875 0.441407 -0.2890625 0.707031 v 5.796876 c -0.00390625 0.265624 0.1015625 0.519531 0.2929685 0.707031 l 4.097657 4.101562 c 0.1875 0.1875 0.441406 0.292969 0.707031 0.292969 h 5.800781 c 0.265625 0 0.519531 -0.105469 0.707031 -0.292969 l 4.101563 -4.101562 c 0.1875 -0.1875 0.292968 -0.441407 0.292968 -0.707031 v -5.796876 c 0 -0.265624 -0.105468 -0.519531 -0.296874 -0.707031 l -4.097657 -4.101562 c -0.1875 -0.1875 -0.441406 -0.292969 -0.707031 -0.292969 z m 0.414062 2 h 4.96875 l 3.519531 3.511719 v 4.972656 l -3.515624 3.515625 h -4.972657 l -3.511719 -3.511719 v -4.972656 z m 1.480469 2 v 3 l 0.28125 2 h 1.46875 l 0.25 -2 v -3 z m 1 5.75 c -0.691406 0 -1.25 0.558594 -1.25 1.25 s 0.558594 1.25 1.25 1.25 s 1.25 -0.558594 1.25 -1.25 s -0.558594 -1.25 -1.25 -1.25 z m 0 0' fill='%232e3436'/%3E%3C/svg%3E");
+            --ext-err-icon: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg height='28px' viewBox='0 0 16 16' width='28px' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m 8 1 c -3.871094 0 -7 3.128906 -7 7 s 3.128906 7 7 7 s 7 -3.128906 7 -7 s -3.128906 -7 -7 -7 z m -4 6 h 8 v 2 h -8 z m 0 0' fill='%23C01C28'/%3E%3C/svg%3E");
+            --ext-upd-icon: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg height='18px' viewBox='0 0 16 16' width='18px' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m 8 0 c -0.257812 0 -0.511719 0.0976562 -0.707031 0.292969 l -1.707031 1.707031 h -2.585938 c -0.550781 0 -1 0.449219 -1 1 v 2.585938 l -1.707031 1.707031 c -0.3906252 0.390625 -0.3906252 1.023437 0 1.414062 l 1.707031 1.707031 v 2.585938 c 0 0.550781 0.449219 1 1 1 h 2.585938 l 1.707031 1.707031 c 0.390625 0.390625 1.023437 0.390625 1.414062 0 l 1.707031 -1.707031 h 2.585938 c 0.550781 0 1 -0.449219 1 -1 v -2.585938 l 1.707031 -1.707031 c 0.390625 -0.390625 0.390625 -1.023437 0 -1.414062 l -1.707031 -1.707031 v -2.585938 c 0 -0.550781 -0.449219 -1 -1 -1 h -2.585938 l -1.707031 -1.707031 c -0.195312 -0.1953128 -0.449219 -0.292969 -0.707031 -0.292969 z m 0 5 c 0.257812 0 0.511719 0.097656 0.707031 0.292969 l 2 2 c 0.183594 0.1875 0.289063 0.441406 0.285157 0.707031 h 0.007812 v 1 h -2 v 2 h -2 v -2 h -2 v -1 h 0.007812 c -0.003906 -0.265625 0.101563 -0.519531 0.285157 -0.707031 l 2 -2 c 0.195312 -0.195313 0.449219 -0.292969 0.707031 -0.292969 z m 0 0' fill='%23ff7800'/%3E%3C/svg%3E");
+            --ext-conf-icon: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg height='18px' viewBox='0 0 16 16' width='18px' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m 8 0 c -0.550781 0 -1 0.449219 -1 1 v 0.238281 c 0 0.464844 -0.378906 0.902344 -0.820312 1.046875 c -0.023438 0.007813 -0.042969 0.011719 -0.0625 0.019532 c -0.445313 0.148437 -1.007813 0.015624 -1.28125 -0.359376 l -0.140626 -0.195312 c -0.15625 -0.214844 -0.390624 -0.359375 -0.652343 -0.398438 c -0.261719 -0.042968 -0.53125 0.019532 -0.742188 0.175782 c -0.449219 0.324218 -0.550781 0.949218 -0.222656 1.398437 l 0.140625 0.199219 c 0.277344 0.375 0.226562 0.953125 -0.050781 1.328125 c -0.011719 0.015625 -0.023438 0.035156 -0.035157 0.050781 c -0.273437 0.378906 -0.804687 0.601563 -1.25 0.457032 l -0.230468 -0.074219 c -0.523438 -0.171875 -1.089844 0.117187 -1.257813 0.640625 c -0.171875 0.527344 0.113281 1.089844 0.640625 1.261718 l 0.222656 0.074219 c 0.445313 0.144531 0.738282 0.636719 0.75 1.101563 v 0.070312 c 0.015626 0.464844 -0.304687 0.960938 -0.746093 1.105469 l -0.226563 0.070313 c -0.527344 0.171874 -0.8125 0.738281 -0.640625 1.261718 c 0.167969 0.523438 0.734375 0.8125 1.257813 0.640625 l 0.230468 -0.074219 c 0.445313 -0.144531 0.976563 0.078126 1.25 0.457032 c 0.011719 0.015625 0.027344 0.035156 0.039063 0.050781 c 0.277344 0.375 0.324219 0.953125 0.050781 1.328125 l -0.144531 0.203125 c -0.324219 0.445313 -0.226563 1.070313 0.222656 1.394531 c 0.445313 0.324219 1.070313 0.226563 1.394531 -0.21875 l 0.144532 -0.199218 c 0.273437 -0.378907 0.835937 -0.507813 1.277344 -0.359376 c 0.019531 0.007813 0.042968 0.011719 0.0625 0.019532 c 0.445312 0.140625 0.820312 0.578125 0.820312 1.046875 v 0.238281 c 0 0.550781 0.449219 1 1 1 s 1 -0.449219 1 -1 v -0.238281 c 0 -0.46875 0.378906 -0.90625 0.820312 -1.046875 c 0.023438 -0.007813 0.042969 -0.015625 0.066407 -0.023438 c 0.441406 -0.144531 1.003906 -0.015625 1.277343 0.363282 l 0.144532 0.199218 c 0.324218 0.445313 0.949218 0.542969 1.394531 0.21875 c 0.445313 -0.324218 0.546875 -0.949218 0.222656 -1.394531 l -0.148437 -0.203125 c -0.273438 -0.375 -0.226563 -0.953125 0.050781 -1.328125 c 0.015625 -0.015625 0.027344 -0.035156 0.039063 -0.050781 c 0.273437 -0.378906 0.804687 -0.601563 1.25 -0.457032 l 0.234374 0.078126 c 0.523438 0.167968 1.085938 -0.121094 1.257813 -0.644532 c 0.171875 -0.523437 -0.117187 -1.089844 -0.640625 -1.257812 l -0.230469 -0.074219 c -0.445312 -0.144531 -0.734375 -0.640625 -0.746093 -1.105469 c 0 -0.023437 0 -0.046875 0 -0.070312 c -0.015626 -0.464844 0.300781 -0.957032 0.746093 -1.101563 l 0.230469 -0.074219 c 0.523438 -0.171874 0.8125 -0.734374 0.640625 -1.261718 c -0.171875 -0.523438 -0.734375 -0.8125 -1.257813 -0.640625 l -0.230468 0.074219 c -0.445313 0.144531 -0.980469 -0.078126 -1.253906 -0.457032 c -0.011719 -0.015625 -0.023438 -0.035156 -0.035157 -0.050781 c -0.277343 -0.375 -0.324219 -0.953125 -0.050781 -1.328125 l 0.144531 -0.199219 c 0.324219 -0.445312 0.226563 -1.074219 -0.222656 -1.398437 c -0.214844 -0.15625 -0.480469 -0.21875 -0.742187 -0.179688 c -0.265626 0.042969 -0.5 0.1875 -0.652344 0.402344 l -0.144532 0.195312 c -0.273437 0.378907 -0.835937 0.507813 -1.28125 0.363282 c -0.019531 -0.007813 -0.039062 -0.015625 -0.0625 -0.023438 c -0.441406 -0.140625 -0.820312 -0.578125 -0.820312 -1.046875 v -0.238281 c 0 -0.550781 -0.449219 -1 -1 -1 z m 0 4 c 0.871094 0 1.675781 0.273438 2.332031 0.742188 c 0.003907 0.007812 0.011719 0.015624 0.019531 0.023437 c 0.011719 0.003906 0.019532 0.007813 0.03125 0.015625 c 0.660157 0.484375 1.160157 1.171875 1.421876 1.976562 v 0.007813 s 0.003906 0.003906 0.003906 0.007813 c 0.292968 0.851562 0.15625 1.65625 0 2.457031 c 0 0 -0.003906 0.003906 -0.003906 0.007812 v 0.003907 c -0.261719 0.800781 -0.757813 1.488281 -1.414063 1.976562 c -0.015625 0.003906 -0.027344 0.011719 -0.039063 0.019531 c -0.007812 0.003907 -0.015624 0.011719 -0.019531 0.019531 c -0.65625 0.46875 -1.460937 0.742188 -2.332031 0.742188 c -0.855469 0 -1.644531 -0.265625 -2.289062 -0.714844 c -0.019532 -0.015625 -0.042969 -0.035156 -0.0625 -0.046875 c -0.011719 -0.007812 -0.023438 -0.015625 -0.035157 -0.019531 c -0.652343 -0.484375 -1.148437 -1.160156 -1.40625 -1.945312 c -0.003906 -0.015626 -0.007812 -0.023438 -0.011719 -0.035157 c -0.003906 -0.007812 -0.007812 -0.015625 -0.011718 -0.019531 c -0.285156 -0.847656 -0.148438 -1.644531 0 -2.4375 c 0.003906 -0.007812 0.007812 -0.011719 0.011718 -0.019531 c 0.003907 -0.011719 0.007813 -0.023438 0.011719 -0.039063 c 0.261719 -0.785156 0.757813 -1.460937 1.414063 -1.945312 c 0.007812 -0.003906 0.019531 -0.007813 0.027344 -0.015625 c 0.019531 -0.011719 0.042968 -0.03125 0.058593 -0.046875 c 0.648438 -0.449219 1.4375 -0.714844 2.292969 -0.714844 z m 0 0' fill='%232e3436'/%3E%3C/svg%3E");
+            --ext-del-icon: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg height='18px' viewBox='0 0 16 16' width='18px' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23C01C28'%3E%3Cpath d='m 1 3 h 14 c 0.550781 0 1 0.449219 1 1 s -0.449219 1 -1 1 h -14 c -0.550781 0 -1 -0.449219 -1 -1 s 0.449219 -1 1 -1 z m 0 0'/%3E%3Cpath d='m 4 4 v -1.5 c 0 -1.386719 1.113281 -2.5 2.5 -2.5 h 2.980469 c 1.382812 0 2.5 1.113281 2.5 2.5 v 1.5 h -2 v -1.5 c 0 -0.269531 -0.230469 -0.5 -0.5 -0.5 h -2.980469 c -0.269531 0 -0.5 0.230469 -0.5 0.5 v 1.5 z m 0 0'/%3E%3Cpath d='m 4 4 v 9 c 0 0.546875 0.453125 1 1 1 h 6 c 0.546875 0 1 -0.453125 1 -1 v -9 h 2 v 9 c 0 1.660156 -1.339844 3 -3 3 h -6 c -1.660156 0 -3 -1.339844 -3 -3 v -9 z m 0 0'/%3E%3Cpath d='m 7 7 v 5 c 0 0.277344 -0.222656 0.5 -0.5 0.5 s -0.5 -0.222656 -0.5 -0.5 v -5 c 0 -0.277344 0.222656 -0.5 0.5 -0.5 s 0.5 0.222656 0.5 0.5 z m 0 0'/%3E%3Cpath d='m 10 7 v 5 c 0 0.277344 -0.222656 0.5 -0.5 0.5 s -0.5 -0.222656 -0.5 -0.5 v -5 c 0 -0.277344 0.222656 -0.5 0.5 -0.5 s 0.5 0.222656 0.5 0.5 z m 0 0'/%3E%3C/g%3E%3C/svg%3E");
+            --loading-icon: url("https://raw.githubusercontent.com/dp0sk/UserCSS/refs/heads/main/adwaita-gnome-extensions/spinner.gif");
+        }
+
+        .gnome-navbar-brand img {
+            filter: invert(80%);
+        }
+    }
+
+    li,
+    a,
+    .btn,
+    .form-control {
+        transition: 200ms ease-in-out;
+    }
+
+    body {
+        background-color: var(--bg);
+    }
+
+    /* HEADER - WIP */
+    .navbar-default {
+        background-color: var(--bg);
+        border-color: var(--border);
+    }
+
+    .navbar-default .navbar-nav > li > a {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-top: 10px;
+        font-weight: 700;
+        border-radius: var(--button-radius);
+    }
+
+    .navbar-default .navbar-nav > li > a,
+    .navbar-default .navbar-nav > li > a:hover,
+    .navbar-default .navbar-nav > li > a:focus {
+        color: var(--text) !important;
+    }
+
+    .navbar-default .navbar-nav > .active > a,
+    .navbar-default .navbar-nav > .active > a:focus {
+        background-color: var(--tab) !important;
+    }
+
+    .navbar-default .navbar-nav > li > a:hover {
+        background-color: var(--tab-hover) !important;
+    }
+
+    .gnome-header {
+        margin-bottom: 50px;
+    }
+
+    .gnome-header .avatar img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .dropdown-toggle.hidden-xs.avatar {
+        padding: 3px 0 0 5px;
+        width: 30px !important;
+        height: 30px !important;
+        margin-right: 16px;
+    }
+
+    /* MESSAGE BANNER - WIP */
+    p.message.error {
+        background-image: var(--err-icon);
+    }
+
+    p.message.info {
+        background-image: var(--notif-icon);
+    }
+
+    p.message.info,
+    p.message.error,
+    .alert-info {
+        border: none;
+        border-radius: var(--banner-radius);
+        padding: 16px 16px 16px 80px;
+    }
+
+    p.message.error {
+        background-color: var(--error);
+        color: var(--text-error);
+        /* TODO: Image */
+    }
+
+    p.message.info,
+    .alert-info {
+        background-color: var(--banner);
+        color: var(--text-banner);
+        /* TODO: Image */
+    }
+
+    /* BUTTONS */
+    .btn,
+    #opinion_form p input {
+        border: none !important;
+        border-radius: var(--button-radius);
+        font-weight: 600;
+        color: var(--text);
+    }
+
+    .btn-primary {
+        color: var(--text-button) !important;
+        background-color: var(--button);
+    }
+
+    .btn-primary:hover {
+        background-color: var(--button-hover);
+    }
+
+    a {
+        color: var(--link);
+    }
+
+    a:hover {
+        color: var(--link-hover);
+    }
+
+    a:visited {
+        color: var(--link-visited);
+    }
+
+
+    .form-control,
+    input,
+    .btn-default,
+    .btn-secondary {
+        box-shadow: none;
+        border: none !important;
+        border-radius: var(--button-radius);
+        background-color: var(--tab);
+        font-weight: 600;
+        color: var(--text) !important;
+    }
+
+    .form-control::placeholder {
+        color: var(--text-light);
+    }
+
+    .form-control:hover,
+    .btn-default:hover,
+    .btn-secondary {
+        background-color: var(--tab-hover);
+    }
+
+    .form-control:focus {
+        background-color: var(--tab-active);
+        box-shadow: none;
+    }
+
+
+
+    /* CONTAINER */
+    #container,
+    h3,
+    dt,
+    h4,
+    h2 {
+        color: var(--text);
+    }
+
+    /* DROPDOWN */
+    .fsui-dropdown {
+        background-color: var(--dd);
+        border-radius: var(--dd-radius);
+        border: 1px solid var(--border);
+        padding: 6px 6px 3px 6px;
+        margin-top: 24px;
+        box-shadow: var(--dd-shadow);
+        -moz-box-shadow: var(--dd-shadow);
+        -webkit-box-shadow: var(--dd-shadow);
+    }
+
+    .fsui-dropdown::before {
+        position: absolute;
+        top: -13px;
+        left: 69.5%;
+        display: inline-block;
+        border-right: 12px solid transparent;
+        border-bottom: 12px solid var(--border);
+        border-left: 12px solid transparent;
+        content: '';
+    }
+
+    .fsui-dropdown::after {
+        position: absolute;
+        top: -11px;
+        left: 70%;
+        display: inline-block;
+        border-right: 11px solid transparent;
+        border-bottom: 11px solid var(--dd);
+        border-left: 11px solid transparent;
+        content: '';
+    }
+
+    .fsui-dropdown-item,
+    .navbar-default .btn-link {
+        padding: 8px 48px 8px 16px !important;
+        border-radius: var(--dde-radius);
+        color: var(--text) !important;
+        margin-bottom: 3px;
+        font-weight: 500;
+    }
+
+    .fsui-dropdown-item.selected {
+        list-style-type: none;
+        background-color: var(--tab);
+    }
+
+    .fsui-dropdown-item:hover,
+    .navbar-default .btn-link:hover {
+        background-color: var(--tab-hover);
+    }
+
+    .navbar-default .btn-link {
+        text-decoration: none;
+        width: 100%;
+        text-align: left;
+    }
+
+    .navbar-nav > li > .dropdown-menu,
+    ul.dropdown-menu .col-sm-12 {
+        padding-bottom: 14px;
+    }
+
+
+    .navbar-nav > li > .dropdown-menu,
+    ul.dropdown-menu {
+        background-color: var(--dd);
+        border-radius: var(--dd-radius);
+        border: 1px solid var(--border);
+        padding-bottom: 0;
+        box-shadow: var(--dd-shadow);
+        -moz-box-shadow: var(--dd-shadow);
+        -webkit-box-shadow: var(--dd-shadow);
+    }
+
+    @media screen and (min-width: 767px) {
+        #userDropdownMenu .dropdown-menu::before {
+            position: absolute;
+            top: -13px;
+            left: 81%;
+            display: inline-block;
+            border-right: 12px solid transparent;
+            border-bottom: 12px solid var(--border);
+            border-left: 12px solid transparent;
+            content: '';
+        }
+
+        #userDropdownMenu .dropdown-menu::after {
+            position: absolute;
+            top: -11px;
+            left: 81.5%;
+            display: inline-block;
+            border-right: 11px solid transparent;
+            border-bottom: 11px solid var(--dd);
+            border-left: 11px solid transparent;
+            content: '';
+        }
+
+        .dropdown-menu .divider {
+            background: var(--border);
+        }
+    }
+
+    hr {
+        border-color: var(--border)
+    }
+}
+
+@-moz-document domain("extensions.gnome.org") {
+    /* MAIN PAGE */
+    /* SEARCH */
+    #search-bar {
+        margin-bottom: 0px;
+    }
+
+    #search-bar input {
+        background-color: var(--input-bar);
+        color: var(--text-light) !important;
+        border: none;
+        border-radius: var(--banner-radius);
+        box-shadow: none;
+    }
+
+    .has-feedback-left .form-control-feedback {
+        top: -2px;
+        filter: var(--text-light-filter);
+    }
+
+    /* LIST */
+    .paginator {
+        background-color: transparent !important;
+        border-radius: 0;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-color: var(--border);
+        padding: 6px;
+    }
+
+    .paginator.after-paginator {
+        border-bottom: none;
+    }
+
+    .paginator .fsui {
+        top: -2em;
+        font-size: 14px;
+        color: var(--text-light);
+    }
+
+    .paginator .number,
+    .fsui-dropdown-link {
+        border-radius: var(--button-radius);
+        padding: 6px 14px;
+        margin: 0 2px;
+        border: none !important;
+        color: var(--text) !important;
+        text-decoration: none !important;
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+    .paginator .number.current,
+    .fsui-dropdown-link.selected {
+        background-color: var(--tab);
+    }
+
+    .paginator .number:hover,
+    .fsui-dropdown-link:hover {
+        background-color: var(--tab-hover) !important;
+    }
+
+    .paginator .number.current:focus,
+    .fsui-dropdown-link.selected:focus {
+        background-color: var(--tab-active);
+    }
+
+    .paginator.loading {
+    left: -50%;
+        background-image: var(--loading-icon);
+        background-repeat: no-repeat;
+        background-position: 14px 14px;
+        background-size: 18px;
+    }
+
+    span.ellipses {
+        margin: 0 6px;
+    }
+
+    div#extensions-list {
+        background-color: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--card-radius);
+        -webkit-box-shadow: var(--shadow);
+        -moz-box-shadow: var(--shadow);
+        box-shadow: var(--shadow);
+    }
+
+    /* LIST-ITEM */
+    li.extension,
+    #local_extensions div.extension,
+    #shell_settings div.setting {
+        border-color: var(--border);
+        padding: 16px 16px 4px 16px;
+    }
+
+    li.extension {
+        pointer-events: none;
+        margin: 0;
+    }
+
+    li.extension:hover {
+        background-color: var(--card-hover);
+    }
+
+    li.extension .extension-name a {
+        color: var(--text) !important;
+        pointer-events: auto;
+    }
+
+    li.extension .author,
+    li.extension .author a,
+    li.extension .description,
+    li.extension .system-extension {
+        color: var(--text-light);
+    }
+
+    ul.extensions {
+        margin: 0;
+        border-bottom: 1px solid var(--border);
+    }
+}
+
+@-moz-document domain("extensions.gnome.org") {
+    /* EXTENSION PAGE */
+    /* MAIN CARD */
+    /*div.extension.single-page.dummy {
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+        border-radius: var(--card-radius);
+        background-color: var(--card);
+        padding: 16px;
+    } --BROKEN, THX GNOME TEAM */
+    div.extension.single-page.dummy hr {
+        border-color: transparent;
+        margin: 0;
+    }
+
+    div.col-xs-12.col-sm-4.col-md-4.col-lg-4 {
+        padding: 0;
+    }
+
+    .extension.single-page div.controls {
+        margin: 0;
+    }
+
+    .extension .author,
+    .extension .author a,
+    .extension .divider,
+    .extension .downloads {
+        color: var(--text-light);
+    }
+
+    .extension .screenshot img {
+        border-radius: 8px;
+    }
+
+    .extension .screenshot {
+        background: none;
+    }
+
+    /* SCREENSHOT OVERLAY */
+    #cboxOverlay {
+        background-image: none;
+        background-color: #000;
+    }
+
+    /* FORM */
+    .col-sm-6.col-sm-push-6 {
+        margin-top: 26px;
+        padding: 0;
+        margin-left: 16px;
+    }
+
+    #opinion_form {
+        overflow: visible;
+    }
+
+    #opinion_form .unauthenticated {
+        border-color: var(--border);
+        box-shadow: var(--shadow);
+        border-radius: var(--card-radius);
+        background-color: var(--card-gray);
+    }
+
+    #opinion_form .comment_choice {
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+        border-radius: var(--card-radius);
+        background-color: var(--card);
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    #opinion_form .comment_choice #leave_comment {
+        border-right: 1px solid var(--border);
+    }
+
+    #opinion_form .comment_choice #leave_comment,
+    #opinion_form .comment_choice #leave_rating {
+        background-color: var(--tab);
+    }
+
+    #opinion_form .comment_choice #leave_comment.active,
+    #opinion_form .comment_choice #leave_rating.active,
+    #opinion_form .comment_choice #leave_comment:focus,
+    #opinion_form .comment_choice #leave_rating:focus {
+        background-color: var(--tab-active) !important;
+        box-shadow: none;
+    }
+
+    #opinion_form .comment_choice #leave_comment:hover,
+    #opinion_form .comment_choice #leave_rating:hover {
+        background-color: var(--tab-hover);
+        box-shadow: none;
+    }
+
+    #rating_form {
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+        border-radius: var(--card-radius);
+        background-color: var(--card);
+        padding: 20px 20px 38px 20px;
+        margin-top: 20px;
+    }
+
+    textarea {
+        border: none !important;
+        border-radius: var(--button-radius) !important;
+        background-color: var(--tab);
+        color: var(--text);
+    }
+
+    blockquote {
+        border-color: var(--border);
+    }
+
+    /* COMMENTS */
+    .col-sm-pull-6 {
+        margin-top: 26px;
+        margin-left: -32px;
+        padding: 0;
+    }
+
+    .comments-holder {
+        background-color: var(--card) !important;
+        border-radius: var(--card-radius);
+        box-shadow: var(--shadow);
+        border: 1px solid var(--border);
+    }
+
+    .comment {
+        padding: 20px;
+    }
+
+    .comment time {
+        color: var(--text-light)
+    }
+
+    .comments-holder hr {
+        margin: 0;
+        border-color: var(--border) !important;
+    }
+
+    #comments .show-all {
+        text-align: center;
+        color: var(--link);
+        margin: 14px
+    }
+
+    #comments .show-all:hover {
+        color: var(--link-hover);
+    }
+
+    /* SWITCHES */
+    .extension .extension-name a,
+    .setting .setting-name a {
+        color: var(--text);
+    }
+
+    ._gnome-switch {
+        width: 52px;
+        margin-left: 40px;
+    }
+
+    ._gnome-switch .on {
+        border-radius: 20px 0 0 20px
+    }
+
+    ._gnome-switch .off {
+        border-radius: 0 20px 20px 0
+    }
+
+    ._gnome-switch span:not(.slider) {
+        color: transparent;
+        text-shadow: none;
+        border: none;
+        width: 26px;
+        height: 26px;
+    }
+
+    ._gnome-switch span:not(.slider) {
+        background-color: var(--accent-reverse);
+    }
+
+    ._gnome-switch.activated span:not(.slider) {
+        background-color: var(--accent);
+    }
+
+    ._gnome-switch .slider {
+        width: 22px !important;
+        height: 22px !important;
+        border-radius: 22px !important;
+        border: none !important;
+        top: 3px !important;
+    }
+
+    ._gnome-switch:not(.activated) .slider {
+        background-color: var(--on-accent-reverse);
+        left: 3px !important;
+    }
+
+    ._gnome-switch.activated .slider {
+        background-color: var(--on-accent);
+        left: 27px !important;
+    }
+
+    ._gnome-switch .slider .handle {
+        display: none;
+    }
+
+    ._gnome-switch.customized .error {
+        margin-left: 30px;
+        font-size: 0;
+        width: 28px;
+        height: 28px;
+        border: none;
+        background-color: transparent;
+        background-image: var(--ext-err-icon);
+    }
+
+    .extension.upgradable .upgrade-button,
+    .extension.configurable .configure-button,
+    .extension.installed .uninstall-button {
+        width: 28px;
+        height: 28px;
+        border: none !important;
+        background-color: transparent;
+    }
+
+    .extension.upgradable .upgrade-button {
+        background-image: var(--ext-upd-icon);
+    }
+
+    .extension.configurable .configure-button {
+        background-image: var(--ext-conf-icon);
+    }
+
+    .extension.installed .uninstall-button {
+        background-image: var(--ext-del-icon);
+    }
+
+    .extension.upgradable .upgrade-button:hover,
+    .extension.configurable .configure-button:hover,
+    .extension.installed .uninstall-button:hover {
+        background-color: var(--trans-btn-hover) !important;
+    }
+}
